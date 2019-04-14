@@ -1,1 +1,9 @@
-<h1>Welcome to Sean's favorite playlists App</h1>
+<% @playlists.each do |playlist| %>
+    <div>
+      <h1><%= playlist.name %></h1><br />
+      <i><%= playlist.link %></i><br />
+      <p><%= playlist.description %></p><br />
+    </div>
+  
+    <hr />
+  <% end %>
