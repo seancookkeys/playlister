@@ -3,4 +3,8 @@ class PlaylistsController < ApplicationController
         @playlists = Playlist.all
     end
 
+    def new
+        @playlist = Playlist.new
+    end 
+
 end
