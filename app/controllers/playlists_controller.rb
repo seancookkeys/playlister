@@ -7,4 +7,15 @@ class PlaylistsController < ApplicationController
         @playlist = Playlist.new
     end 
 
+    def create
+        Playlist.create(playlist_params)
+        redirect_to root_path
+    end 
+
+    private
+
+    def playlist_params
+        params.require(:playlist).permit(:name, :description, :link)
+    end
+
 end
